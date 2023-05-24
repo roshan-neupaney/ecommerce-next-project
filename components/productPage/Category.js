@@ -18,13 +18,6 @@ const Category = (props) => {
 
   let data = props.data
   // console.log(data)
-
-  
-
-
-
-  
-
 return (
     <>
       <div className="categoryMenu flex flex-col  w-2/12 h-full my-4 p-2   ">
@@ -55,27 +48,29 @@ return (
             <h1>Category</h1>
           </div>
           <ul>
-            <Link href="">
+            <Link href="" onClick={handleCross}>
               <li className="my-2" onClick={() => {
+                
                 props.setApiUrls("all");
               }}>All</li>
             </Link>
-            <Link href="">
-              <li className="my-2" onClick={() => {
+            <Link href="" onClick={handleCross}>
+              <li className="my-2"
+               onClick={() => {
                 props.setApiUrls("men's clothing");
               }}>Men</li>
             </Link>
-            <Link href="">
+            <Link href="" onClick={handleCross}>
               <li className="my-2" onClick={() => {
                 props.setApiUrls("women's clothing");
               }}>Women</li>
             </Link>
-            <Link href="">
+            <Link href="" onClick={handleCross}>
               <li className="my-2" onClick={() => {
                 props.setApiUrls("electronics");
               }}>Electronic</li>
             </Link>
-            <Link href="">
+            <Link href="" onClick={handleCross}>
               <li className="my-2" onClick={() => {
                 props.setApiUrls("jewelery");
               }}>Jewelery</li>

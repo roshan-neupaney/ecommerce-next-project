@@ -27,7 +27,7 @@ const productPage = ({ data }) => {
 
   return (
     <>
-      <div className="productContainer flex flex-col  justify-center w-full m-auto bg-[#FDF6F6]  ">
+      <div className="productContainer flex flex-col  justify-center w-full m-auto bg-[#FDF6F6]   ">
         <ProductNavbar data={data} setApiUrl={setApiUrl} arrayLength={arrayLength} />
         <div className="w-full flex ">
           <ProductContainer data={index}/>

@@ -15,9 +15,9 @@ const ProductCart = () => {
 
   return (
     <>
-    <div onClick={handleFilter} ><BsFillCartCheckFill/></div>
+    <div className='' onClick={handleFilter} ><BsFillCartCheckFill/></div>
         <div
-            className={`cartSideBar absolute flex flex-col w-2/5 h-full  top-0 ${cartProduct ? "right-0 " : "-right-[100%]" } top-0 bg-white transition-all duration-500 ease-in-out`}>
+            className={`cartSideBar absolute flex flex-col w-2/5 h-[98%] top-0 ${cartProduct ? "top-0  " : "-top-[100%] " } right-0 bg-white transition-all duration-500 ease-in-out`}>
             <div className=" m-4">
                 <div className="cartHeader flex my-2">
                     <div className="font-semibold text-base">Shopping Cart</div>
