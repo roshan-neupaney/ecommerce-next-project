@@ -1,4 +1,4 @@
-import '@styles/global.css'
+import '../../styles/global.css'
 import Navbar from '../components/Navbar/Navbar'
 
 const RootLayout = ({children}) => {
