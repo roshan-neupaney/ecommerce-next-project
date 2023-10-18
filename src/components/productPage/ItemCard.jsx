@@ -1,13 +1,15 @@
+"use client";
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 
 const ItemCard = (props) => {
-  
+  const router = useRouter();
   return (
     <>
-    <Link href={`./products/${props.id}`}  >
-    <div className="itemCard m-4 flex w-68 h-64 flex-col bg-white   " >
+    
+    <div className="itemCard m-4 flex w-68 h-64 flex-col bg-white" onClick={()=>router.push(`/products/${props.id}`)} >
         <div className="cardImage flex justify-center h-48 w-3/5 m-auto  ">
             <Image
             src={props.image}
@@ -23,7 +25,7 @@ const ItemCard = (props) => {
             <p className="price">${props.price}</p>
         </div>
     </div>
-    </Link>
+    
     </>
   )
 }
