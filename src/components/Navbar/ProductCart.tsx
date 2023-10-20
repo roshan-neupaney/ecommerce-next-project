@@ -22,7 +22,7 @@ const ProductCart = (props) => {
 
   return (
     <>
-    <div className='' onClick={handleFilter} ><BsFillCartCheckFill/></div>
+    <div className='' onClick={handleFilter} ></div>
         {/* <div
             className={`cartSideBar absolute flex flex-col w-2/5 h-[98%] top-0 ${cartProduct ? "top-0 " : "-top-[100%] " } right-0 bg-white transition-all duration-500 ease-in-out`}>
             <div className=" m-4">

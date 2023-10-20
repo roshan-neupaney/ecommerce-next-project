@@ -1,10 +1,20 @@
-import React from "react";
+'use client'
+import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ProductCart from "./ProductCart";
+import ProductCart from '../../components/Navbar/ProductCart'
+import { BsFillCartCheckFill } from "react-icons/bs";
+import CartModal from "../Modals/cartModal";
 
+const defaultDrawer={
+  state: true,
+  anchor: 'top'
+}
 const Navbar = () => {
+  const [showCart, toggleShowCart] = useState<any>(defaultDrawer);
   return (
+    <>
+    
     <nav className="flex w-full">
       <Link href="/">
         <Image 
@@ -22,12 +32,12 @@ const Navbar = () => {
             <Link href='/products'><li className="mx-7 ">Products</li></Link>
             <Link href='/contact'><li className="mx-7 ">Contact</li></Link>
             <Link href='/signin'><li className="mx-7">Sign In</li></Link>
-            <div className="text-2xl mx-7 cursor-pointer "><ProductCart/> </div>
-            
-            
+            <div className="text-2xl mx-7 cursor-pointer " onClick={()=> toggleShowCart({state: true, anchor: 'top'})} ><BsFillCartCheckFill/> </div>
         </ul>
       </div>
     </nav>
+    <CartModal anchor={'top'} open={showCart.state} toggleShowCart={toggleShowCart}  />
+    </>
   );
 };
 

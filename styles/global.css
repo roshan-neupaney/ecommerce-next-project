@@ -37,3 +37,7 @@
 .inactive-btn:hover{
     color: #5266CE !important;
 }
+
+.css-MuiPaper-root-MuiDrawer-paper{
+    width: 50%;
+}
